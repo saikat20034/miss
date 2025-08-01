@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>I Miss My Wife</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #f3e8ff; /* light purple */
+    }
+    .romantic-font {
+      font-family: 'Great Vibes', cursive;
+    }
+    .flip-card {
+      perspective: 1000px;
+      width: 24rem; /* 384px */
+      height: 16rem; /* 256px */
+      cursor: pointer;
+      margin: auto;
+      position: relative;
+    }
+    .flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 1s;
+      transform-style: preserve-3d;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(107, 33, 168, 0.5);
+    }
+    .flipped {
+      transform: rotateY(180deg);
+    }
+    .flip-front,
+    .flip-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .flip-front {
+      background: #9f7aea; /* deep purple */
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      box-shadow: 0 0 15px #6b21a8;
+      user-select: none;
+      text-align: center;
+    }
+    .flip-back {
+      background: #ede9fe; /* very light purple */
+      color: #4c1d95; /* dark purple */
+      transform: rotateY(180deg);
+      font-size: 1.125rem;
+      overflow-y: auto;
+      user-select: text;
+      box-shadow: inset 0 0 10px #6b21a8;
+      line-height: 1.5;
+    }
+    /* Scrollbar styling for letter content */
+    .flip-back::-webkit-scrollbar {
+      width: 6px;
+    }
+    .flip-back::-webkit-scrollbar-thumb {
+      background-color: #6b21a8;
+      border-radius: 3px;
+    }
+    /* Quote box animation */
+    #quoteBox {
+      transition: opacity 1s ease-in-out;
+      font-style: italic;
+      font-size: 1.25rem;
+      color: #6b21a8;
+      max-width: 600px;
+      margin: 0 auto;
+      min-height: 3rem;
+      user-select: none;
+    }
+    /* Navbar and footer */
+    nav, footer {
+      background-color: #6b21a8; /* deep purple */
+    }
+    nav a:hover, nav a:focus {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <nav class="text-white px-6 py-4 shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="flex justify-between items-center max-w-7xl mx-auto">
+      <h1 class="text-2xl romantic-font">For My Love</h1>
+      <div class="space-x-6 text-lg font-semibold">
+        <a href="#quotes" class="hover:underline focus:underline">Quotes</a>
+        <a href="#memories" class="hover:underline focus:underline">Memories</a>
+        <a href="#reason" class="hover:underline focus:underline">Why I Miss You</a>
+        <a href="#letter" class="hover:underline focus:underline">Open Letter</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-24 max-w-5xl mx-auto px-4">
+
+    <!-- Hero Section -->
+    <section class="text-center py-16">
+      <h2 class="text-5xl md:text-6xl font-bold text-purple-800 mb-4 romantic-font animate-pulse select-none">
+        I Miss You, My Love
+      </h2>
+      <p class="text-xl md:text-2xl max-w-xl mx-auto">
+        Every moment without you feels like an eternity. I carry your smile in my soul.
+      </p>
+    </section>
+
+    <!-- Rotating Love Quotes -->
+    <section id="quotes" class="py-12 bg-white rounded-xl shadow-lg mb-12">
+      <h3 class="text-3xl font-semibold text-purple-700 mb-6 text-center select-none">💌 Rotating Love Quotes</h3>
+      <div id="quoteBox"></div>
+    </section>
+
+    <!-- Why I Miss You -->
+    <section id="reason" class="py-16 px-4 text-center">
+      <h3 class="text-3xl font-semibold text-purple-800 mb-6 select-none">🌸 Why I Miss You</h3>
+      <ul class="max-w-3xl mx-auto text-left space-y-5 text-lg list-disc list-inside">
+        <li>🫶 Your warm hugs that melt my worries.</li>
+        <li>🎀 Your smile that brightens up my day.</li>
+        <li>🗣️ Our deep conversations late at night.</li>
+        <li>🍳 The little things you do that make life beautiful.</li>
+        <li>💤 Falling asleep knowing you're near me.</li>
+      </ul>
+    </section>
+
+    <!-- Memories Section -->
+    <section
+      id="memories"
+      class="py-16 px-4 bg-purple-50 rounded-xl shadow-inner my-12"
+      >
+      <h3 class="text-3xl text-purple-800 font-bold text-center mb-8 select-none">
+        📸 Our Sweet Memories
+      </h3>
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
+      >
+        <img
+          src="https://i.ibb.co/201gVtxC/20230806-131030.jpg"
+          alt="Memory 1"
+          class="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500 object-cover w-full h-64"
+          loading="lazy"
+        />
+        <img
+          src="https://i.ibb.co/0Ryg3yv3/IMG-20230708-WA0029.jpg"
+          alt="Memory 2"
+          class="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500 object-cover w-full h-64"
+          loading="lazy"
+        />
+        <img
+          src="https://i.ibb.co/wrpSTmpN/IMG-20230708-WA0032.jpg"
+          alt="Memory 3"
+          class="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500 object-cover w-full h-64"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <!-- Letter Section with Cover and Reveal -->
+    <section
+      id="letter"
+      class="py-16 px-6 bg-white rounded-xl shadow-lg text-center max-w-xl mx-auto"
+    >
+      <h3 class="text-3xl text-purple-800 font-bold mb-8 select-none">💖 A Letter From My Heart</h3>
+      <div class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Click to open letter">
+        <div id="flipInner" class="flip-inner">
+          <!-- Front -->
+          <div class="flip-front">
+            💌 Click to Open My Letter
+          </div>
+          <!-- Back -->
+          <div class="flip-back">
+            <p class="text-base leading-relaxed whitespace-pre-line select-text">
+              My dearest love,
+              <br /><br />
+              Every heartbeat whispers your name. Life without your laughter, touch, and presence feels incomplete.
+              I miss the way you say my name, the way your eyes shine when you smile. I miss every little part of you.
+              <br /><br />
+              Until I hold your hand again, I’ll carry your love in every breath I take.
+              <br /><br />
+              Yours forever,
+              <br />
+              <span class="romantic-font text-2xl text-purple-700">Your Beloved 💜</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <p class="text-sm text-gray-500 mt-4 select-none">
+        Click the card and enter the secret word to reveal 💌
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-purple-900 text-white py-6 mt-12 text-center select-none">
+    Made with ❤️ for the love of my life
+    <br />
+    <span class="text-sm">&copy; 2025 | Forever Yours</span>
+  </footer>
+
+  <!-- Background music using local file (put your mp3 in same folder) -->
+  <audio autoplay loop controls class="fixed bottom-4 right-4 w-48 rounded-md shadow-lg bg-white">
+    <source src="/music/Sahiba - (Raag.Fm).mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Rotating Quotes Logic
+    const quotes = [
+      "You are the sunshine of my darkest days.",
+      "Every second without you is a second too long.",
+      "My heart beats in the rhythm of your love.",
+      "I miss your voice, your smile, your everything.",
+      "You are not just in my heart—you are my heart."
+    ];
+    let index = 0;
+    const quoteBox = document.getElementById('quoteBox');
+
+    function rotateQuote() {
+      quoteBox.style.opacity = 0;
+      setTimeout(() => {
+        quoteBox.textContent = quotes[index];
+        quoteBox.style.opacity = 1;
+        index = (index + 1) % quotes.length;
+      }, 800);
+    }
+    rotateQuote();
+    setInterval(rotateQuote, 4500);
+
+    // Letter Reveal With Security Word "sawm"
+    const flipCard = document.querySelector('.flip-card');
+    const flipInner = document.getElementById('flipInner');
+
+    flipCard.addEventListener('click', () => {
+      const input = prompt("Enter the secret word to reveal the letter:");
+      if (input && input.trim().toLowerCase() === 'sawm') {
+        flipInner.classList.add('flipped');
+        flipCard.setAttribute('aria-pressed', 'true');
+      } else {
+        alert('❌ Incorrect word. Please try again.');
+      }
+    });
+  </script>
+</body>
+</html>
