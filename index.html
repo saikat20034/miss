@@ -137,6 +137,20 @@
       </ul>
     </section>
 
+    <!-- Love Countdown Section -->
+<section class="py-16 px-6 bg-pink-100 text-center rounded-xl shadow-lg my-12" id="countdown">
+  <h2 class="text-4xl font-bold text-pink-800 mb-4 select-none">⏳ Together Since 2017</h2>
+  <p class="text-lg text-gray-700 mb-8">Every moment with you has been a beautiful chapter in our love story.</p>
+
+  <div id="love-counter" class="text-2xl sm:text-3xl md:text-4xl font-mono text-pink-700 space-y-3">
+    <div>❤️ <span id="years"></span> years</div>
+    <div>💫 <span id="months"></span> months</div>
+    <div>🌸 <span id="days"></span> days</div>
+    <div>⏰ <span id="hours"></span>h : <span id="minutes"></span>m : <span id="seconds"></span>s</div>
+  </div>
+</section>
+
+
     <!-- Memories Section -->
     <section id="memories" class="py-16 px-4 bg-purple-50 rounded-xl shadow-inner my-12">
       <h3 class="text-3xl text-purple-800 font-bold text-center mb-8 select-none">📸 Our Sweet Memories</h3>
@@ -271,5 +285,33 @@
       }
     });
   </script>
+  <script>
+  function updateLoveCounter() {
+    const startDate = new Date("2017-01-01T00:00:00");
+    const now = new Date();
+
+    const totalMilliseconds = now - startDate;
+    const totalSeconds = Math.floor(totalMilliseconds / 1000);
+
+    const years = now.getFullYear() - startDate.getFullYear();
+    const months = years * 12 + (now.getMonth() - startDate.getMonth());
+    const days = Math.floor(totalMilliseconds / (1000 * 60 * 60 * 24));
+
+    const hours = Math.floor(totalSeconds / 3600) % 24;
+    const minutes = Math.floor(totalSeconds / 60) % 60;
+    const seconds = totalSeconds % 60;
+
+    document.getElementById("years").textContent = years;
+    document.getElementById("months").textContent = months;
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+    document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+    document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+  }
+
+  setInterval(updateLoveCounter, 1000);
+  updateLoveCounter();
+</script>
+
 </body>
 </html>
