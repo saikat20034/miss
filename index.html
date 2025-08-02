@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,8 +18,8 @@
     }
     .flip-card {
       perspective: 1000px;
-      width: 24rem; /* 384px */
-      height: 16rem; /* 256px */
+      width: 24rem;
+      height: 16rem;
       cursor: pointer;
       margin: auto;
       position: relative;
@@ -46,10 +46,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1.5rem;
+      padding: 2rem; /* increased padding */
     }
     .flip-front {
-      background: #9f7aea; /* deep purple */
+      background: #9f7aea;
       color: white;
       font-size: 1.5rem;
       font-weight: 700;
@@ -58,8 +58,8 @@
       text-align: center;
     }
     .flip-back {
-      background: #ede9fe; /* very light purple */
-      color: #4c1d95; /* dark purple */
+      background: #ede9fe;
+      color: #4c1d95;
       transform: rotateY(180deg);
       font-size: 1.125rem;
       overflow-y: auto;
@@ -67,7 +67,6 @@
       box-shadow: inset 0 0 10px #6b21a8;
       line-height: 1.5;
     }
-    /* Scrollbar styling for letter content */
     .flip-back::-webkit-scrollbar {
       width: 6px;
     }
@@ -75,7 +74,6 @@
       background-color: #6b21a8;
       border-radius: 3px;
     }
-    /* Quote box animation */
     #quoteBox {
       transition: opacity 1s ease-in-out;
       font-style: italic;
@@ -86,9 +84,8 @@
       min-height: 3rem;
       user-select: none;
     }
-    /* Navbar and footer */
     nav, footer {
-      background-color: #6b21a8; /* deep purple */
+      background-color: #6b21a8;
     }
     nav a:hover, nav a:focus {
       text-decoration: underline;
@@ -141,64 +138,81 @@
     </section>
 
     <!-- Memories Section -->
-    <section
-      id="memories"
-      class="py-16 px-4 bg-purple-50 rounded-xl shadow-inner my-12"
-      >
-      <h3 class="text-3xl text-purple-800 font-bold text-center mb-8 select-none">
-        📸 Our Sweet Memories
-      </h3>
-      <div
-        class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
-      >
-        <img
-          src="https://i.ibb.co/201gVtxC/20230806-131030.jpg"
-          alt="Memory 1"
-          class="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500 object-cover w-full h-64"
-          loading="lazy"
-        />
-        <img
-          src="https://i.ibb.co/0Ryg3yv3/IMG-20230708-WA0029.jpg"
-          alt="Memory 2"
-          class="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500 object-cover w-full h-64"
-          loading="lazy"
-        />
-        <img
-          src="https://i.ibb.co/wrpSTmpN/IMG-20230708-WA0032.jpg"
-          alt="Memory 3"
-          class="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500 object-cover w-full h-64"
-          loading="lazy"
-        />
+    <section id="memories" class="py-16 px-4 bg-purple-50 rounded-xl shadow-inner my-12">
+      <h3 class="text-3xl text-purple-800 font-bold text-center mb-8 select-none">📸 Our Sweet Memories</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <img src="https://i.ibb.co/201gVtxC/20230806-131030.jpg" alt="Memory 1" class="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500 object-cover w-full h-64" loading="lazy" />
+        <img src="https://i.ibb.co/0Ryg3yv3/IMG-20230708-WA0029.jpg" alt="Memory 2" class="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500 object-cover w-full h-64" loading="lazy" />
+        <img src="https://i.ibb.co/wrpSTmpN/IMG-20230708-WA0032.jpg" alt="Memory 3" class="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-500 object-cover w-full h-64" loading="lazy" />
       </div>
     </section>
 
-    <!-- Letter Section with Cover and Reveal -->
-    <section
-      id="letter"
-      class="py-16 px-6 bg-white rounded-xl shadow-lg text-center max-w-xl mx-auto"
-    >
+    <!-- Love Timeline Section -->
+<section class="py-16 px-6 bg-purple-100 rounded-xl shadow-inner my-12" id="timeline">
+  <h3 class="text-3xl text-purple-800 font-bold text-center mb-12 select-none">⏳ Our Journey Together</h3>
+  <div class="relative border-l-4 border-purple-500 max-w-2xl mx-auto">
+    <!-- Event 1 -->
+    <div class="mb-10 ml-6">
+      <div class="absolute w-4 h-4 bg-purple-700 rounded-full -left-2 top-1.5"></div>
+      <h4 class="text-xl font-semibold text-purple-800">🌸 First Time We Met</h4>
+      <p class="text-gray-700 mt-1">That magical moment when my heart whispered, “She’s the one.”</p>
+    </div>
+    <!-- Event 2 -->
+    <div class="mb-10 ml-6">
+      <div class="absolute w-4 h-4 bg-purple-700 rounded-full -left-2 top-1.5"></div>
+      <h4 class="text-xl font-semibold text-purple-800">❤️ First ‘I Love You’</h4>
+      <p class="text-gray-700 mt-1">A simple phrase, but it changed everything — forever bound by love.</p>
+    </div>
+    <!-- Event 3 -->
+    <div class="mb-10 ml-6">
+      <div class="absolute w-4 h-4 bg-purple-700 rounded-full -left-2 top-1.5"></div>
+      <h4 class="text-xl font-semibold text-purple-800">💍 The Proposal</h4>
+      <p class="text-gray-700 mt-1">That unforgettable “yes” still echoes in my soul.</p>
+    </div>
+    <!-- Event 4 -->
+    <div class="mb-10 ml-6">
+      <div class="absolute w-4 h-4 bg-purple-700 rounded-full -left-2 top-1.5"></div>
+      <h4 class="text-xl font-semibold text-purple-800">🏠 Building Our Life</h4>
+      <p class="text-gray-700 mt-1">From little moments to big dreams — our love built this home.</p>
+    </div>
+    <!-- Event 5 -->
+    <div class="ml-6">
+      <div class="absolute w-4 h-4 bg-purple-700 rounded-full -left-2 top-1.5"></div>
+      <h4 class="text-xl font-semibold text-purple-800">🌌 Even When Apart</h4>
+      <p class="text-gray-700 mt-1">Distance may separate us, but love keeps us close — always.</p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Letter Section -->
+    <section id="letter" class="py-16 px-6 bg-white rounded-xl shadow-lg text-center max-w-xl mx-auto">
       <h3 class="text-3xl text-purple-800 font-bold mb-8 select-none">💖 A Letter From My Heart</h3>
       <div class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Click to open letter">
         <div id="flipInner" class="flip-inner">
-          <!-- Front -->
           <div class="flip-front">
             💌 Click to Open My Letter
           </div>
-          <!-- Back -->
-          <div class="flip-back">
-            <p class="text-base leading-relaxed whitespace-pre-line select-text">
-              My dearest love,
-              <br /><br />
-              Every heartbeat whispers your name. Life without your laughter, touch, and presence feels incomplete.
-              I miss the way you say my name, the way your eyes shine when you smile. I miss every little part of you.
-              <br /><br />
-              Until I hold your hand again, I’ll carry your love in every breath I take.
-              <br /><br />
-              Yours forever,
-              <br />
-              <span class="romantic-font text-2xl text-purple-700">Your Beloved 💜</span>
-            </p>
-          </div>
+ <div class="flip-back flex items-start justify-center">
+  <div class="text-base leading-relaxed whitespace-pre-line select-text pt-12 px-2 text-left max-h-full overflow-y-auto">
+    <p>
+      My dearest love,
+      <br /><br />
+      Every heartbeat whispers your name. Life without your laughter, touch, and presence feels incomplete.
+      I miss the way you say my name, the way your eyes shine when you smile. I miss every little part of you.
+      <br /><br />
+      You are the boss of my world.
+      <br /><br />
+      Until I hold your hand again, I’ll carry your love in every breath I take.
+      <br /><br />
+      Yours forever,
+      <br />
+      <span class="romantic-font text-2xl text-purple-700">Your Beloved 💜</span>
+    </p>
+  </div>
+</div>
+
+
         </div>
       </div>
       <p class="text-sm text-gray-500 mt-4 select-none">
@@ -214,14 +228,14 @@
     <span class="text-sm">&copy; 2025 | Forever Yours</span>
   </footer>
 
-  <!-- Background music using local file (put your mp3 in same folder) -->
+  <!-- Local Background Music -->
   <audio autoplay loop controls class="fixed bottom-4 right-4 w-48 rounded-md shadow-lg bg-white">
     <source src="/music/Sahiba - (Raag.Fm).mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
   </audio>
 
+  <!-- JS -->
   <script>
-    // Rotating Quotes Logic
     const quotes = [
       "You are the sunshine of my darkest days.",
       "Every second without you is a second too long.",
@@ -243,7 +257,7 @@
     rotateQuote();
     setInterval(rotateQuote, 4500);
 
-    // Letter Reveal With Security Word "sawm"
+    // Flip card logic with password
     const flipCard = document.querySelector('.flip-card');
     const flipInner = document.getElementById('flipInner');
 
